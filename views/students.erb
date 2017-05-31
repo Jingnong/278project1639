@@ -1,0 +1,16 @@
+<!-- Students page -->
+<h1> Students </h1>
+
+<!-- Create a new student -->
+<a href="/students/new"> Add a student</a>
+
+<!-- Show all students -->
+<% if @students.any? %>
+  <ul id="students">
+    <% @students.each do |student| %>
+      <li><a href="/students/<%=student.id%>"><%=student.firstname%></a></li>
+    <% end %>
+  </ul>
+<% else %>
+  <p> No student has been created yet!</p>
+<% end %>

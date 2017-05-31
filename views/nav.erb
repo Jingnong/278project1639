@@ -1,0 +1,17 @@
+<!-- Navigation bar -->
+<nav>
+  <ul>
+    <li> <a href="/" title="Home">Home</a> </li>
+    <li> <a href="/about" title="About">About</a> </li>
+    <li> <a href="/contact" title="Contact">Contact</a> </li>
+    <li> <a href="/students" title="Students">Students</a> </li>
+    <li> <a href="/comments" title="Comments">Comments</a> </li>
+    <li> <a href="/video" title="Video">Video</a> </li>
+    <!-- When the user has logged in, the tab on navigation bar is logout, otherwise is login -->
+    <% if session[:admin] %>
+      <li> <a href="/logout" title="Logout">Logout</a> </li>
+    <% else %>
+      <li> <a href="/login" title="Login">Login</a> </li>
+    <% end %>
+  </ul>
+</nav>

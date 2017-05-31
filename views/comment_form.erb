@@ -1,0 +1,12 @@
+<!-- Comment form -->
+
+<!-- Field1: content -->
+<label for="content"> Content:</label>
+<input id="content" type="text" name="comments[content]" value="<%=@comments.content%>" required/>
+
+<!-- Field2: creator -->
+<label for="person"> Person:</label>
+<input id="person" type="text" name="comments[person]" value="<%=@comments.person%>" required/>
+
+<!-- Save comment -->
+<input type="submit" value="Save comment"/>

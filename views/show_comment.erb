@@ -1,0 +1,12 @@
+<!-- Show the details of a comment -->
+<h1>Comment</h1>
+
+<p> Content: <%= @comments.content %> </p>
+<p> Created_by: <%= @comments.person %> </p>
+<p> Created_at: <%= @comments.created_at %> </p>
+<p> <a href="/comments">Back to comment index</a> </p>
+
+<form action="/comments/<%= @comments.id %>" method="POST">
+  <input type="hidden" name="_method" value="DELETE"/>
+  <input type="submit" value="Delete this comment"/>
+</form>

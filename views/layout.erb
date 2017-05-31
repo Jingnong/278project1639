@@ -1,0 +1,18 @@
+<!-- Layout of pages -->
+<!Doctype html>
+<html lang="en">
+  <head>
+    <title>Student Information System</title>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" href="/styles.scss"/> <!-- Link style file -->
+  </head>
+  <body>
+    <header>
+      <h1>Student Information System</h1>
+    </header>
+    <%= erb :nav %> <!-- navigation bar -->
+    <section>
+      <%= yield %> <!-- Other sections -->
+    </section>
+  </body>
+</html>

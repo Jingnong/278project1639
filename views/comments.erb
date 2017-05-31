@@ -1,0 +1,15 @@
+<!-- Comments page -->
+<h1> Comments </h1>
+<!-- Show all the comments -->
+<% if @comments.any? %>
+  <ul id="comments">
+    <% @comments.each do |comment| %>
+      <li><a href="/comments/<%=comment.id%>"><%=comment.content%></a></li>
+      <p><%= comment.created_at %></p>
+    <% end %>
+  </ul>
+<% else %>
+  <p> No comments has been created yet!</p>
+<% end %>
+<!-- Click to create a new comment -->
+<a href="/comments/new">Create a new comment</a>

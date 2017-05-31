@@ -1,0 +1,20 @@
+<!-- Student Form -->
+
+<!-- Field1: first name -->
+<label for="firstname"> FirstName:</label>
+<input id="firstname" type="text" name="students[firstname]" value="<%=@students.firstname%>" required/>
+
+<!-- Field2: last name -->
+<label for="lastname"> LastName:</label>
+<input id="lastname" type="text" name="students[lastname]" value="<%=@students.lastname%>" required/>
+
+<!-- Field3: address -->
+<label for="address"> Address:</label>
+<input id="address" type="text" name="students[address]" value="<%=@students.address%>" required/>
+
+<!-- Field4: birthday -->
+<label for="born_on"> Birthday(mm/dd/yyyy): </label>
+<input id="born_on" type="text" name="students[birthday]" value="<%= @students.birthday.strftime("%m/%d/%Y") if @students.birthday%>" required/>
+
+<!-- Save the student -->
+<input type="submit" value="Save Student"/>
